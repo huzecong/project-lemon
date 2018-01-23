@@ -83,21 +83,15 @@ SummaryTree::SummaryTree(QWidget *parent) :
 void SummaryTree::changeEvent(QEvent *event)
 {
     if (event->type() == QEvent::LanguageChange) {
-        addTaskAction->setText(QApplication::translate("SummaryTree", "Add a New Task",
-                                                       0, QApplication::UnicodeUTF8));
-        addTestCaseAction->setText(QApplication::translate("SummaryTree", "Add a Test Case",
-                                                           0, QApplication::UnicodeUTF8));
-        addTestCasesAction->setText(QApplication::translate("SummaryTree", "Add Test Cases ...",
-                                                            0, QApplication::UnicodeUTF8));
-        deleteTaskAction->setText(QApplication::translate("SummaryTree", "Delete Current Task",
-                                                          0, QApplication::UnicodeUTF8));
-        deleteTestCaseAction->setText(QApplication::translate("SummaryTree", "Delete Current Test Case",
-                                                              0, QApplication::UnicodeUTF8));
+        addTaskAction->setText(QApplication::translate("SummaryTree", "Add a New Task", 0));
+        addTestCaseAction->setText(QApplication::translate("SummaryTree", "Add a Test Case", 0));
+        addTestCasesAction->setText(QApplication::translate("SummaryTree", "Add Test Cases ...", 0));
+        deleteTaskAction->setText(QApplication::translate("SummaryTree", "Delete Current Task", 0));
+        deleteTestCaseAction->setText(QApplication::translate("SummaryTree", "Delete Current Test Case", 0));
         for (int i = 0; i < topLevelItemCount(); i ++) {
             QTreeWidgetItem *taskItem = topLevelItem(i);
             for (int j = 0; j < taskItem->childCount(); j ++) {
-                taskItem->child(j)->setText(0, QApplication::translate("SummaryTree", "Test Case #%1",
-                                                                       0, QApplication::UnicodeUTF8).arg(j + 1));
+                taskItem->child(j)->setText(0, QApplication::translate("SummaryTree", "Test Case #%1", 0).arg(j + 1));
             }
         }
     }

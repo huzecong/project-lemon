@@ -21,7 +21,7 @@
 
 #include <QtCore>
 #include <QtGui>
-#include <QDialog>
+#include <QtWidgets>
 
 class Compiler;
 

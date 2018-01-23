@@ -21,7 +21,7 @@
 
 #include <QtCore>
 #include <QtGui>
-#include <QTableWidget>
+#include <QtWidgets>
 
 class Contest;
 

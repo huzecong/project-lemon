@@ -3,7 +3,7 @@
 
 #include <QtCore>
 #include <QtGui>
-#include <QWizard>
+#include <QtWidgets>
 
 namespace Ui {
     class AddCompilerWizard;

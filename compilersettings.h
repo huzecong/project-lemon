@@ -21,7 +21,7 @@
 
 #include <QtCore>
 #include <QtGui>
-#include <QWidget>
+#include <QtWidgets>
 
 namespace Ui {
     class CompilerSettings;

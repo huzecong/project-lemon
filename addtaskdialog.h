@@ -19,7 +19,7 @@
 #ifndef ADDTASKDIALOG_H
 #define ADDTASKDIALOG_H
 
-#include <QDialog>
+#include <QtWidgets>
 
 namespace Ui {
     class AddTaskDialog;

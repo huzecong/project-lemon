@@ -22,6 +22,9 @@
 #include "testcase.h"
 #include "contestant.h"
 
+#include <QtCore>
+#include <QtWidgets>
+
 ExportUtil::ExportUtil(QObject *parent) :
     QObject(parent)
 {

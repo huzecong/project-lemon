@@ -22,6 +22,9 @@
 #include "testcase.h"
 #include "settings.h"
 
+#include <QtCore>
+#include <QtWidgets>
+
 SelfTestUtil::SelfTestUtil(QObject *parent) :
     QObject(parent)
 {

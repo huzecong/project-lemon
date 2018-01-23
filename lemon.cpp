@@ -94,6 +94,8 @@ Lemon::Lemon(QWidget *parent) :
             this, SLOT(aboutLemon()));
     connect(ui->exitAction, SIGNAL(triggered()),
             this, SLOT(close()));
+
+    ui->exitAction->setShortcuts(QKeySequence::Quit);
     
     appTranslator = new QTranslator(this);
     qtTranslator = new QTranslator(this);
@@ -518,7 +520,7 @@ void Lemon::addTask(const QString &title, const QList<QPair<QString, QString> > 
 bool Lemon::compareFileName(const QPair<QString, QString> &a, const QPair<QString, QString> &b)
 {
     return a.first.length() < b.first.length()
-            || a.first.length() == b.first.length() && QString::localeAwareCompare(a.first, b.first) < 0;
+            || (a.first.length() == b.first.length() && QString::localeAwareCompare(a.first, b.first) < 0);
 }
 
 void Lemon::addTasksAction()
